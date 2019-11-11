@@ -1,7 +1,7 @@
 def my_collect(array)
   if block_given?
     index = 0
-
+    newArray = []
     while index < array.length do 
       newArray << yield(array[index])
       index += 1
@@ -9,11 +9,12 @@ def my_collect(array)
   else
     puts "It's empty"
   end
+  newArray
 end
-    newArray = []
+
 array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
 my_collect(array) do |name|
-  newArray << name.split(" ").first
+name.split(" ").first
   
 end
 
