@@ -3,7 +3,7 @@ def my_collect(array)
     index = 0
     while index < array.length do 
       yield(array[index])
-      i += 1
+      index += 1
     end
   else
     puts "It's empty"
